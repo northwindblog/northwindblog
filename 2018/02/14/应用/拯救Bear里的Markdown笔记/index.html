@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="有件事一直困扰了我好久：Bear里的笔记在导出为HTML和Markdown时会丢失所有的图片。看看隔壁的Ulyssses，只要选择导出为富文本就会得到一个文件结构完整的zip压缩包，只需解压出来就可以得到可以直接预览的Markdown。这件事情导致我写文章时极力克制使用图片——如果导出到别处后还要再次手动添加图片，那可真是让人头疼。不过好在这件事情终究是有解决方案的。如果想得到包含所有图片与文本信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拯救Bear里的Markdown笔记">
+<meta property="og:url" content="http://yoursite.com/2018/02/14/应用/拯救Bear里的Markdown笔记/index.html">
+<meta property="og:site_name" content="Northwind">
+<meta property="og:description" content="有件事一直困扰了我好久：Bear里的笔记在导出为HTML和Markdown时会丢失所有的图片。看看隔壁的Ulyssses，只要选择导出为富文本就会得到一个文件结构完整的zip压缩包，只需解压出来就可以得到可以直接预览的Markdown。这件事情导致我写文章时极力克制使用图片——如果导出到别处后还要再次手动添加图片，那可真是让人头疼。不过好在这件事情终究是有解决方案的。如果想得到包含所有图片与文本信">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/02/14/应用/拯救Bear里的Markdown笔记/media/IMG_0714.JPG">
+<meta property="og:image" content="http://yoursite.com/2018/02/14/应用/拯救Bear里的Markdown笔记/media/72C1A530-8D76-4BD3-BDD3-681C97F66988.JPG">
+<meta property="og:image" content="http://yoursite.com/2018/02/14/应用/拯救Bear里的Markdown笔记/media/834C1E1A-E2B1-4781-9484-816D9D148E0B.JPG">
+<meta property="og:updated_time" content="2019-01-07T07:49:33.628Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="拯救Bear里的Markdown笔记">
+<meta name="twitter:description" content="有件事一直困扰了我好久：Bear里的笔记在导出为HTML和Markdown时会丢失所有的图片。看看隔壁的Ulyssses，只要选择导出为富文本就会得到一个文件结构完整的zip压缩包，只需解压出来就可以得到可以直接预览的Markdown。这件事情导致我写文章时极力克制使用图片——如果导出到别处后还要再次手动添加图片，那可真是让人头疼。不过好在这件事情终究是有解决方案的。如果想得到包含所有图片与文本信">
+<meta name="twitter:image" content="http://yoursite.com/2018/02/14/应用/拯救Bear里的Markdown笔记/media/IMG_0714.JPG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/14/应用/拯救Bear里的Markdown笔记/">
+
+
+
+
+
+  <title>拯救Bear里的Markdown笔记 | Northwind</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Northwind</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to Nowhere's Land.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/14/应用/拯救Bear里的Markdown笔记/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Phillip Gu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Northwind">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">拯救Bear里的Markdown笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-14T00:00:00+08:00">
+                2018-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="media/IMG_0714.JPG" alt=""><br>有件事一直困扰了我好久：Bear里的笔记在导出为HTML和Markdown时会丢失所有的图片。看看隔壁的Ulyssses，只要选择导出为富文本就会得到一个文件结构完整的zip压缩包，只需解压出来就可以得到可以直接预览的Markdown。这件事情导致我写文章时极力克制使用图片——如果导出到别处后还要再次手动添加图片，那可真是让人头疼。<br>不过好在这件事情终究是有解决方案的。如果想得到包含所有图片与文本信息的文件，导出.RTF或是.PDF格式就可以解决，所以真正的问题就是：如何转换RTF或PDF变为Markdown？</p>
+<h1 id="用Workflow处理Rich-Text-Format-富文本"><a href="#用Workflow处理Rich-Text-Format-富文本" class="headerlink" title="用Workflow处理Rich Text Format(富文本)"></a>用Workflow处理Rich Text Format(富文本)</h1><p>Workflow是可以将富文本转化为Markdown的，所以这件事情乍一看还是很简单的。我们的大致思路是这样：用Sharesheet调出Workflow，首先用Workflow内置的「Make Markdown from Rich Text」动作把富文本转化为Markdown；然后用「Get Images from Input」从富文本里提取图片；最后把Markdown文本文件和图片保存到一个文件夹下，这样这个Markdown打开就可以预览到图片。如果要把它发送给别人，我们只需要保持Markdown和图片的相对位置不变，把它们打个压缩包就可以了。而如果要注意细节的话，我们还会记得要提取这个文件的首行，也就是Bear里显示的标题，去掉Markdown的标题语法「#」，用来作为文件名。此外iCloud和Workflow配合一直有点问题，也许应该选择用Dropbox来暂存文件。<br><img src="media/72C1A530-8D76-4BD3-BDD3-681C97F66988.JPG" alt=""></p>
+<h1 id="整理错误的链接"><a href="#整理错误的链接" class="headerlink" title="整理错误的链接"></a>整理错误的链接</h1><p>一切是不是都很美好？<br>只有一个问题：如果这样导出的文件，图片仍然加载不出来。<br>如果仔细观察导出的文件，我们就很容易发现问题了。我们预计图片的代码仍旧是诸如<code>![abcd](abcd.jpg)</code>的样式，然而实际上转换出来却成了：<code>![abcd](file:///abcd.jpg)</code>，这大概是由于Workflow在转换的时候引用了在它缓存中的图片地址导致的。既然我们的图片是独立保存的，只需要把Markdown文本中的图片链接替换掉就好了。<br>替换这件事情，还是交给正则表达式做比较方便。通过正则表达式，我们可以将图片的名称(例如abc.jpg)提取出来并组合成正确的图片地址，然后用它把错误的图片地址换掉，这样总算可以显示图片了。<br><img src="media/834C1E1A-E2B1-4781-9484-816D9D148E0B.JPG" alt=""></p>
+<p>在这个Workflow中，所有内容最终会被保存在<code>Dropbox/RTF Savior/文件名/</code>这个目录下。这个Workflow存在一个小问题：如果文件中只有一张图片<code>abc.jpg</code>，这张图片不会被保存为<code>/media/abc.jpg</code>，而会变成<code>media.jpg</code>。不过既然只有一张图片了，也许手动处理一下比用Workflow要来得快些。另外，偶尔转换出的Markdown会有格式问题，这是Workflow的锅。如果遇到这种问题，可以再用Bear导出一次Markdown文件来代替转换的Markdown文件——只是相比用Workflow一次性解决问题，这样不够优雅。<br>你可以<a href="https://workflow.is/workflows/653d64fc84f340d98616f598854f6d98" target="_blank" rel="noopener">点击此处</a>下载这个Workflow。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/09/应用/Workflow模块化(二)：转换文本为图片/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/09/应用/我为什么把我的 Bear 换成了 Ulysses/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Phillip Gu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用Workflow处理Rich-Text-Format-富文本"><span class="nav-number">1.</span> <span class="nav-text">用Workflow处理Rich Text Format(富文本)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整理错误的链接"><span class="nav-number">2.</span> <span class="nav-text">整理错误的链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Phillip Gu</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
